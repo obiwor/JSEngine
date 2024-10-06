@@ -1,4 +1,4 @@
-const doc = document
+const doc = document;
 
 export const createElement = (tag, attributes = {}) => {
     const element = doc.createElement(tag);

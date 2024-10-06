@@ -9,6 +9,6 @@ jsEngine.registerModule({
          * @type {WebGLRenderingContext}
          */
         const {createGL} = await import("./components/gl");
-        jsEngine.gl = createGL().init()
+        jsEngine.gl = createGL().init();
     },
 });

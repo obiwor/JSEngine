@@ -8,7 +8,8 @@
         "lint": "eslint . --fix",
         "prettier": "npx prettier --write .",
         "dev": "vite",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "clean": "node ./js/scripts/deleteNodeModules.js . --force"
     },
     "keywords": [],
     "author": "",

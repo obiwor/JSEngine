@@ -48,7 +48,7 @@ importers:
   js/library/domUtils: {}
 
   packages/gl:
-    devDependencies:
+    dependencies:
       '@js-engine/global':
         specifier: workspace:*
         version: link:../global

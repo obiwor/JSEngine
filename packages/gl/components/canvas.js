@@ -21,7 +21,7 @@ const canvasManagerPrototype = {
         const ctx = this.getContext();
         const canvas = this.getCanvas();
         if (ctx && canvas) {
-            handler()
+            handler();
           
         }
         return this;
