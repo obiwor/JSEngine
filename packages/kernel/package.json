@@ -1,0 +1,17 @@
+{
+    "name": "@js-engine/kernel",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@js-engine/gl": "workspace:*",
+        "@js-engine/global": "workspace:*",
+        "@js-engine/game-loop": "workspace:*"
+    }
+}

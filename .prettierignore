@@ -1,0 +1,5 @@
+**.vscode-server/**
+**/vendors/**
+**/dist/
+**/bin/
+**/public/

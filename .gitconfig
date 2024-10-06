@@ -1,0 +1,13 @@
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true
+[submodule]
+	recurse = true
+[feature]
+	manyFiles = true
+[core]
+	untrackedcache = true
+	editor = code --wait
+[push]
+	autoSetupRemote = true
