@@ -7,12 +7,10 @@ jsEngine.registerModule({
     init: async () => {
         const {createLoop} = await import("./components/loop.js");
         const gl = jsEngine.gl.getContext();
-        jsEngine.gameLoop= createLoop(()=>{
-
+        jsEngine.gameLoop = createLoop(() => {
             gl.clear(gl.COLOR_BUFFER_BIT);
         });
-        
+
         jsEngine.gameLoop.start();
- 
     },
 });

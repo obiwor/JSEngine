@@ -8,7 +8,7 @@ export const createElement = (tag, attributes = {}) => {
     return element;
 };
 
-export const getElement =  (selector) => {
+export const getElement = (selector) => {
     const element = doc.querySelector(selector);
     if (!element) {
         throw new Error(`Element not found: ${selector}`);

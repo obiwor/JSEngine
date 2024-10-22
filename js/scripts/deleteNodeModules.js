@@ -7,19 +7,19 @@ const colors = {
     green: "\x1b[32m",
     yellow: "\x1b[33m",
     blue: "\x1b[34m",
-    reset: "\x1b[0m"
+    reset: "\x1b[0m",
 };
 
 const colorLog = (color, message) => {
     console.log(`${colors[color]}${message}${colors.reset}`);
-}
+};
 
 function deleteNodeModules(rootDir, force = false, ignoreList = []) {
-    const  recursiveDelete = (dir) => {
+    const recursiveDelete = (dir) => {
         const dirContents = readdirSync(dir);
         let deletedCount = 0;
 
-        dirContents.forEach(function(item) {
+        dirContents.forEach(function (item) {
             const itemPath = join(dir, item);
             const stats = statSync(itemPath);
 
@@ -45,7 +45,7 @@ function deleteNodeModules(rootDir, force = false, ignoreList = []) {
         });
 
         return deletedCount;
-    }
+    };
 
     if (!existsSync(rootDir)) {
         throw new Error(`The directory ${rootDir} does not exist.`);
@@ -59,7 +59,7 @@ function deleteNodeModules(rootDir, force = false, ignoreList = []) {
 
 // Usage example
 const rootDirectory = process.argv[2];
-const force = process.argv.includes('--force');
+const force = process.argv.includes("--force");
 if (!rootDirectory) {
     colorLog("blue", "Please specify a directory as an argument.");
     process.exit(1);

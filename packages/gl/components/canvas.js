@@ -22,16 +22,14 @@ const canvasManagerPrototype = {
         const canvas = this.getCanvas();
         if (ctx && canvas) {
             handler();
-          
         }
         return this;
     },
     getCanvas() {},
     setCanvas() {},
     getContext() {},
-    setContext() {}
+    setContext() {},
 };
-
 
 export const createCanvasManager = () => {
     let _canvas, _ctx;
@@ -43,26 +41,30 @@ export const createCanvasManager = () => {
             value: () => _canvas,
             enumerable: false,
             writable: false,
-            configurable: false
+            configurable: false,
         },
         setCanvas: {
-            value: (canvas) => { _canvas = canvas; },
+            value: (canvas) => {
+                _canvas = canvas;
+            },
             enumerable: false,
             writable: false,
-            configurable: false
+            configurable: false,
         },
         getContext: {
             value: () => _ctx,
             enumerable: false,
             writable: false,
-            configurable: false
+            configurable: false,
         },
         setContext: {
-            value: (ctx) => { _ctx = ctx; },
+            value: (ctx) => {
+                _ctx = ctx;
+            },
             enumerable: false,
             writable: false,
-            configurable: false
-        }
+            configurable: false,
+        },
     });
 
     return manager;

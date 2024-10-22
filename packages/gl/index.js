@@ -9,6 +9,11 @@ jsEngine.registerModule({
          * @type {WebGLRenderingContext}
          */
         const {createGL} = await import("./components/gl");
-        jsEngine.gl = createGL().init();
+
+        jsEngine.gl = createGL().initGL();
+
+        window.addEventListener("resize", () => {
+            jsEngine.gl.resize(window.innerWidth, window.innerHeight);
+        });
     },
 });
